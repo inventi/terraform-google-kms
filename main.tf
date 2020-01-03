@@ -14,6 +14,12 @@
  * limitations under the License.
  */
 
+
+terraform {
+  backend "gcs" {}
+}
+
+
 locals {
   keys_by_name = zipmap(var.keys, var.prevent_destroy ? google_kms_crypto_key.key[*].self_link : google_kms_crypto_key.key_ephemeral[*].self_link)
 }
