@@ -34,7 +34,6 @@ resource "google_kms_crypto_key" "key" {
   count           = var.prevent_destroy ? length(var.keys) : 0
   name            = var.keys[count.index]
   key_ring        = google_kms_key_ring.key_ring.self_link
-  rotation_period = var.key_rotation_period
   purpose         = var.purpose
  
   version_template {
