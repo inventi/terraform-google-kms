@@ -87,3 +87,15 @@ variable "purpose" {
   type        = string
 }
 
+variable "algorithm" {
+  description = "Algorithm to use for Key creation"
+  type        = string
+}
+
+variable "protection_level" {
+  description = "Software or HSM level of security"
+  type        = string
+}
+
+
+
