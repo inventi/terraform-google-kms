@@ -82,3 +82,8 @@ variable "key_rotation_period" {
   default = "100000s"
 }
 
+variable "purpose" {
+  description = "KMS Key purpose"
+  type        = string
+}
+
